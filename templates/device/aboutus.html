@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{%load static%}
+{% load copyrighttags %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'cssIndexPage/bootstrap.css' %}" />
+        <title></title>
+      
+        <link href="{% static 'cssIndexPage/styleIndex.css' %}" rel="stylesheet" />
+      
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+      
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+      
+        <link href="{% static 'cssIndexPage/font-awesome.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'cssIndexPage/responsive.css' %}" rel="stylesheet" />
+        <link href="{% static 'style.css.map' %}" rel="stylesheet" />
+        <!-- jQery -->
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <!-- bootstrap js -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+      
+        </script>
+        <!-- custom js -->
+        <script src="{% static 'js/custom.js' %}"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+        </script>
+        <!-- End Google Map -->
+      </head>
+<body>
+    <div class="hero_area mb-5">
+        {% include "device/navbar.html" %}
+         <!-- about section -->
+
+ <section class="about_section mt-5">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2>
+          About <span>Us</span>
+        </h2>
+        <p>
+          Trusted computer repair services with quick turnaround times and expert technical support.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Exceptional Service & Expertise
+              </h3>
+            </div>
+            <p>
+              Welcome to <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b>, your one-stop-shop for all your computer repair needs. Our team of expert technicians has been providing reliable and efficient computer repair services from year {% getCopyrightYears %}, and we take pride in our commitment to customer satisfaction.
+            </p>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+            <div class="img-box">
+              <img src="{% static 'images/about1.jpg' %}" alt="">
+            </div>
+          </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Empowering Your Technology: <br> The <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b> Way
+              </h3>
+            </div>
+            <p>
+                Our team is made up of certified technicians who are passionate about technology and are always up-to-date with the latest advancements in the field. We understand how frustrating it can be when your computer breaks down or malfunctions, which is why we strive to provide fast and reliable repair services to get you back up and running as quickly as possible.
+            </p>
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Repairing Your World, One Device at a Time: The <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b> Difference
+              </h3>
+            </div>
+            <p>
+                At <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b>, we understand the impact that technology has on our daily lives. From staying connected with loved ones to running a successful business, our devices play a vital role in our world. That's why we take our mission to repair your devices seriously - we see ourselves as repairing your world, one device at a time.
+
+            </p>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about2.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+            <div class="img-box">
+              <img src="{% static 'images/about3.jpg' %}" alt="">
+            </div>
+          </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Fast, Efficient, Reliable:<br> The <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b> Advantage
+              </h3>
+            </div>
+            <p>
+                At <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b>, we understand that your time is valuable, and a malfunctioning device can be a significant inconvenience. That's why we're committed to providing fast, efficient, and reliable computer repair services to individuals and businesses in remote, physical and hybrid mode as per customer's satisfaction.
+            </p>
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h3>
+                Making Your Devices Work for You: The <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b> Commitment to Service
+              </h3>
+            </div>
+            <p>
+                At <b style="color: #3d8da2;">Apna Eng</b><b style="color:#bfe1e1">ineer</b>, we understand that technology can be overwhelming, and a malfunctioning device can be a significant inconvenience. That's why we're committed to making your devices work for you by providing top-notch computer repair services to individuals and businesses in remote, physical and hybrid mode as per customer's satisfaction.
+
+            </p>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about4.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="brand_cards mt-5">
+    <div class="brand_card_container">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>
+            Our Bra<span>nd Services</span>
+          </h2>
+          <p>
+            Expert computer repairs and upgrades for all makes and models. Fast, reliable, and affordable solutions.
+          </p>
+        </div>
+        <div class="row mb-5 mt-5">
+          <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="alternate" direction="left">
+            <img src="{% static 'images/dell.png' %}" width="100" height="80" alt="Dell"/> &nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/apple.png' %}" width="80" height="50" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/asus.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/acer.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/hp.png' %}" width="80" height="50" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/lenovo.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/samsung.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/nokia.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+            
+          </marquee>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  </div>
+  {% include "device/footer.html" %}
+
+
+
+  
+  <!-- end about section --> 
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{%load static%}
+{% load copyrighttags %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'cssIndexPage/bootstrap.css' %}" />
+    <title>Contact Us</title>
+  
+    <link href="{% static 'cssIndexPage/styleIndex.css' %}" rel="stylesheet" />
+  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+  
+    <link href="{% static 'cssIndexPage/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'cssIndexPage/responsive.css' %}" rel="stylesheet" />
+    <link href="{% static 'style.css.map' %}" rel="stylesheet" />
+    <!-- jQery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  
+    </script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+    <script>
+      $(document).ready(function() {
+          // messages timeout for 10 sec 
+          setTimeout(function() {
+              $('#message').fadeOut('slow');
+          }, 4000); // <-- time in milliseconds, 1000 =  1 sec
+  
+          // delete message
+          $('.del-msg').live('click',function(){
+              $('.del-msg').parent().attr('style', 'display:none;');
+          })
+      });
+  </script>
+
+<style>
+form{
+      display: flex;
+      margin-top: 2%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+     
+    }
+
+    form .input-box{
+      margin-bottom: 15px;
+      width: calc(100% / 2 - 20px);
+    }
+  
+      form .input-box span.details{
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+      text-align: left;
+      }
+      .input-box input{
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+
+     .input-box input:focus,
+.input-box input{
+  border-color: #9b59b6;
+}
+ 
+
+
+.input-box input[type=text], select,input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: #9b59b6;
+  }
+
+   .input-box textarea{
+    width: 207%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: #9b59b6;
+  }
+
+ .row .button{
+   height: 45px;
+   margin: 35px 0;
+   width:180%;
+   
+ }
+ .row .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+.row .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+</style>
+
+  </head>
+
+<body>
+
+  {% include "device/navbar.html" %}
+
+  <section class="about_section mt-5">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2>
+          Contact <span>Us</span>
+        </h2>
+        <p>
+          Send Us Your Valuable Feedback !
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+              {% include 'device/message.html' %}
+              {% csrf_token %}
+            
+                
+                  <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+
+                  </div>
+                  
+                    <div class="input-box">
+                      <span class="details">Your Email</span>
+                      <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Mobile Number</span>
+                      <input type="number" name="phone" class="form-control" placeholder="Phone Number">
+                    </div>
+                      <div class="input-box">
+                        <span class="details">Subject</span>
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Your Message</span>
+                        <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                      </div>
+                    </div>
+                      <div class="button">
+                        <input type="submit" value="Send Message">
+                      </div>
+                    </form>
+        </div>
+      
+    </div>
+  </section>
+  
+  {% include "device/footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+{%load static%}
+{% load copyrighttags %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'cssIndexPage/bootstrap.css' %}" />
+  <title>ApnaEngineer</title>
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/icon type">
+
+  <link href="{% static 'cssIndexPage/styleIndex.css' %}" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
+
+  <link href="{% static 'cssIndexPage/font-awesome.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'cssIndexPage/responsive.css' %}" rel="stylesheet" />
+  <link href="{% static 'style.css.map' %}" rel="stylesheet" />
+  <!-- jQery -->
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+
+  </script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+
+</head>
+<body>
+  <div class="hero_area">
+    {% include "device/navbar.html" %}
+
+    <section class="slider_section ">
+      <div class="slider-bg">
+        <img src="{% static 'images/slider-bg.jpg' %}" alt="">
+      </div>
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="detail-box">
+                    <h1>
+                      Computer problem?  <br>
+                      Apna Engineer Will Fix It!!
+                    </h1>
+                    <p>
+                      Our experienced technicians can quickly diagnose and repair any computer issues, from software malfunctions to hardware failures. Get your computer back up and running in no time with our reliable repair services.
+                    </p>
+                    <a href="/aboutus">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="detail-box">
+                    <h1>
+                      Affordable & Expert <br>
+                      Computer Repairs
+                    </h1>
+                    <p>
+                      Don't let the cost of computer repairs hold you back. Our services are affordable and competitively priced and also Our technicians are experts in their field and have years of experience repairing all types of computers.
+                    </p>
+                    <a href="/aboutus">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="detail-box">
+                    <h1>
+                      Convenient Repairs <br>
+                      Custom Computer Builds
+                    </h1>
+                    <p>
+                      The computer issues can be a major inconvenience. That's why we offer convenient repair options, including on-site repairs and remote support, to minimize the impact on your schedule. Along with this our experts build a custom computer as per requirements.
+                      
+                    </p>
+                    <a href="/aboutus">
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn_box">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- start service section -->
+
+    <section id="services" class="service_section layout_padding">
+      <div class="service_container">
+        <div class="container ">
+          <div class="heading_container heading_center">
+            <h2>
+              Our <span>Services</span>
+            </h2>
+            <p>
+              Expert computer repairs and upgrades for all makes and models. Fast, reliable, and affordable solutions.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/s1.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Computer Repair
+                  </h5>
+                  <p>
+                    Is your computer running slowly or not working as it should? Our computer repair service can help you get back up <span id="dots">...</span><span id="more">and running quickly. <br> <br>Our team of skilled technicians can diagnose and fix a wide range of computer issues, including virus removal, hardware upgrades, software installation, data recovery, and more.
+                        <br><br>
+                    Whether you're a business owner or a home user, we understand that having a reliable computer is essential in today's world. That's why we provide fast, affordable computer repair services to help you get your computer back in working order as soon as possible.
+                    <br><br>
+                    Our computer repair service includes a comprehensive diagnosis of your computer's hardware and software, followed by expert repair and maintenance services to ensure your computer is running smoothly. We use the latest tools and techniques to fix your computer, and we stand behind our work with a satisfaction guarantee.
+                    <br><br>
+                    Contact us today to schedule a computer repair appointment and get your computer back to its optimal performance.</span>
+                  </p>
+                  <button onclick="myFunction()" id="myBtn" href="">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="{% static 'images/s2.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Hardware Replacement & Upgrade
+                  </h5>
+                  <p>
+                    Is your computer running slowly or struggling to keep up with your needs? Our hardware replacement and upgrade  <span id="dots1">...</span><span id="more1">services can help breathe new life into your computer. Our team of skilled technicians can diagnose and upgrade your computer's hardware to enhance its performance and extend its lifespan.
+                      <br><br>
+                    We can replace or upgrade a range of hardware components, including processors, memory, hard drives, graphics cards, power supplies, and more. Whether you need to upgrade your computer for gaming, video editing, or simply to keep up with the latest software, we can help.
+                    <br><br>
+                    Our hardware replacement and upgrade service includes a thorough evaluation of your computer's current hardware, followed by expert recommendations for the most appropriate upgrades or replacements. We use only high-quality, reliable components to ensure that your computer is running at its best.
+                    <br><br>
+                    At the same time, we understand that cost is a concern for many of our customers. That's why we offer affordable upgrade options that can significantly improve your computer's performance without breaking the bank.
+                    <br><br>
+                    Contact us today to schedule a hardware replacement or upgrade appointment and take the first step in getting your computer back to its optimal performance.</span>
+                  </p>
+                  <button onclick="myFunction1()" id="myBtn1" href="">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="{% static 'images/s3.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Data Recovery
+                  </h5>
+                  <p>
+                    Have you lost important files or data due to a computer crash, accidental deletion, or other reasons? Our data recovery <span id="dots2">...</span><span id="more2">service can help you retrieve your valuable information. Our team of experienced technicians uses advanced tools and techniques to recover data from a range of devices, including hard drives, solid-state drives, USB drives, memory cards, and more.
+                      <br><br>
+                    We understand that losing data can be a frustrating and stressful experience, which is why we prioritize our data recovery service to quickly restore your lost data. Our process begins with a free evaluation of your device to determine the extent of data loss and feasibility of recovery. We will then provide you with a quote for the service.
+                    <br><br>
+                    Our data recovery service covers a range of issues, including accidental deletion, virus infections, corrupted files, physical damage, and more. We will work tirelessly to recover as much data as possible, and we will keep you updated throughout the process.
+                    <br><br>
+                    We also understand the importance of privacy and security when it comes to your data. That's why we take great care to ensure that your data remains secure throughout the recovery process. We use advanced encryption and security protocols to protect your data from unauthorized access.
+                    <br><br>
+                    Contact us today to schedule a data recovery appointment and let our experts help you get your valuable data back.
+                  </span>
+                </p>
+                <button onclick="myFunction2()" id="myBtn2" href="">
+                  Read More
+                </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="box ">
+                <div class="img-box">
+                  <img src="{% static 'images/s4.png' %}" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    Software Update
+                  </h5>
+                  <p>
+                    Keeping your software up to date is important for ensuring the security and optimal performance of your computer. <span id="dots3">...</span><span id="more3">Our software update service can help you keep your computer running smoothly by installing the latest updates and patches for your software.
+                      <br><br>
+                    Our team of experienced technicians can update a wide range of software, including operating systems, drivers, antivirus software, productivity suites, and more. We will work with you to determine which software needs to be updated and create a plan to ensure that all updates are installed in a timely manner.
+                    <br><br>
+                    By keeping your software up to date, you can improve your computer's performance, fix bugs and glitches, and enhance its security against cyber threats. Our software update service ensures that your computer is running on the latest and most secure software versions available.
+                    <br><br>
+                    At the same time, we understand that updating software can be a complex and time-consuming process, which is why we offer our services at an affordable price. We also offer remote software update services, so you don't even have to leave your home or office.
+                    <br><br>
+                    Contact us today to schedule a software update appointment and let our experts help you keep your computer running at its best.</span>
+                  </p>
+                  <button onclick="myFunction3()" id="myBtn3" href="">
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- end service section -->
+
+
+    
+ <!-- about section -->
+
+ <section id="about_section" class="about_section">
+  <div class="container ">
+    <div class="heading_container heading_center">
+      <h2>
+        About <span>Us</span>
+      </h2>
+      <p>
+        Trusted computer repair services with quick turnaround times and expert technical support.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>
+              Exceptional Service & Expertise
+            </h2>
+          </div>
+          <p>
+            Welcome to <b>ApnaEngineer</b>, your one-stop-shop for all your computer repair needs. Our team of expert technicians has been providing reliable and efficient computer repair services from year {% getCopyrightYears %}, and we take pride in our commitment to customer satisfaction.
+          </p>
+          <a href="/aboutus">
+            Read More
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="{% static 'images/about-img.jpg' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end about section -->
+
+<!-- why choose us section  start-->
+
+<section id="why_us_section" class="why_us_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Why Cho<span>ose Us</span>
+      </h2>
+      <p>
+        Experience, reliability, and competitive pricing - your go-to choice for all your computer needs.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w1.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Free Diagnostics
+            </h5>
+            <p>
+              Get a thorough analysis of your computer's issues at no cost with our free diagnostics service.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w2.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Quick Repair Process
+            </h5>
+            <p>
+              We offer a quick and efficient repair process to get your computer up and running as soon as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w3.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Low Price Guarantee
+            </h5>
+            <p>
+              We offer a low price guarantee compare to local competitor to ensure that you get the best value for your money.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w4.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Assured Flexible Services
+            </h5>
+            <p>
+              As per your unique needs in reoair services, we ensure that you get the customized support you need.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w5.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Friendly Environment
+            </h5>
+            <p>
+              Our friendly team of technicians is always ready to greet you with a smile and provide personalized support.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box ">
+          <div class="img-box">
+            <img src="{% static 'images/w6.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              27/7 Support
+            </h5>
+            <p>
+             Computer problems can happen at any time. That's why we offer 24/7 Support , to take your problems to us!
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- why choose us section end-->
+
+
+<section class="brand_cards">
+  <div class="brand_card_container">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Bra<span>nd Services</span>
+        </h2>
+        <p>
+          Expert computer repairs and upgrades for all makes and models. Fast, reliable, and affordable solutions.
+        </p>
+      </div>
+      <div class="row mb-5 mt-5">
+        <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="alternate" direction="left">
+          <img src="{% static 'images/dell.png' %}" width="100" height="80" alt="Dell"/> &nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/apple.png' %}" width="80" height="50" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/asus.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/acer.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/hp.png' %}" width="80" height="50" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/lenovo.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/samsung.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          <img src="{% static 'images/nokia.png' %}" width="100" height="80" alt="Dell"/>&nbsp;&nbsp;&nbsp;
+          
+        </marquee>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+  {% include "device/footer.html" %}
+
+  </div>
+</body>
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+
+  function myFunction1() {
+    var dots = document.getElementById("dots1");
+    var moreText = document.getElementById("more1");
+    var btnText = document.getElementById("myBtn1");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  function myFunction2() {
+    var dots = document.getElementById("dots2");
+    var moreText = document.getElementById("more2");
+    var btnText = document.getElementById("myBtn2");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  function myFunction3() {
+    var dots = document.getElementById("dots3");
+    var moreText = document.getElementById("more3");
+    var btnText = document.getElementById("myBtn3");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
+</html>
