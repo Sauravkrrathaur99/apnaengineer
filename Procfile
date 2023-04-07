@@ -1,0 +1,1 @@
+web gunicorn apnaengineer.wsgi:application --log-file -

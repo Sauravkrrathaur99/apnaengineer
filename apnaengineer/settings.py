@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 
 import os
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
@@ -126,11 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS=[
-STATIC_DIR,
- ]
+STATIC_ROOT = os.path.join(BASE_DIR,  'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
 
 LOGIN_REDIRECT_URL='/afterlogin'
 from django.contrib.messages import constants as messages
@@ -144,3 +143,5 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
