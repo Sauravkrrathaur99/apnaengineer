@@ -26,3 +26,4 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('errorpage', views.errorpage, name="errorpage"),
 ]
+
