@@ -37,6 +37,8 @@ def home_view(request):
         print("user is unique")
     
     count = Userip.objects.all().count
+    print(type(count))
+    
     print(count)
 
     return render(request,'device/index.html',{'count':count})

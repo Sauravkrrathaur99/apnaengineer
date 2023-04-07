@@ -87,12 +87,29 @@ WSGI_APPLICATION = 'apnaengineer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#  'default': {
+#      'ENGINE': 'django.db.backends.sqlite3',
+#      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#  }
+# }
+
+
+
 DATABASES = {
- 'default': {
-     'ENGINE': 'django.db.backends.sqlite3',
-     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
- }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd7pt0b7r4cnnm5',
+        'USER': 'yfyeywbzbllhry',
+        'PASSWORD': 'c2c93683b8bd417d7a2a87c20e7f920ceeef963db4775565ee95628a67977672',
+        'HOST': 'ec2-3-230-24-12.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
 }
+
+
+
+
 
 
 # Password validation
